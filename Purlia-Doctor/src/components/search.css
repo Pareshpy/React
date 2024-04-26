@@ -1,0 +1,108 @@
+/* Import Normalize.css */
+@import 'normalize.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-size: 30px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6741D9;
+    font-size: 30px;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+}
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: auto;
+}
+#search{
+    width: 57%;
+    height: 80%;
+    border-radius: 26px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    background-color: none;
+    background-image: url(search-interface-symbol.png);
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    outline: none;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+a:visited{
+    color: #6741D9;
+}
+
+.container{
+    height: 100px;
+    width: 50%;
+    display: flex;
+    column-gap: 30px;
+    color: white;
+
+}
+
+.box{
+    width: 40%;
+    height: 100%;
+    background-color: #6741D9;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+
+}
+.maincon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box1{
+    background-image: url(doctors.png);
+    background-repeat: no-repeat;
+    background-position: 18px 14px; 
+}
+.box2{
+    background-image: url(clinic.png);
+    background-repeat: no-repeat;
+    background-position: 20px 20px; 
+}
+.box3{
+    background-image: url(blood-bank.png);
+    background-repeat: no-repeat;
+    background-position: 3px 17px; 
+
+}
+img{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+}

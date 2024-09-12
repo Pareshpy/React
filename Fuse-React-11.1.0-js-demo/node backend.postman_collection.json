@@ -1,0 +1,2897 @@
+{
+	"info": {
+		"_postman_id": "80f6fa70-42e8-40c5-9f1f-d77c51f89515",
+		"name": "node backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28305059",
+		"_collection_link": "https://winter-eclipse-799386.postman.co/workspace/My-Workspace~40f78743-c0ca-440a-8298-c66365457ca9/collection/28305059-80f6fa70-42e8-40c5-9f1f-d77c51f89515?action=share&source=collection_link&creator=28305059"
+	},
+	"item": [
+		{
+			"name": "OTPLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Admin\",\r\n    \"password\":\"Admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/OTPLogin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"OTPLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResendOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login_token\":\"QWlkZW4=\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/resendOTP",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"resendOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifyOTPLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login_token\":\"QWlkZW4=\",\r\n    \"otp\":\"655450\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/verifyOTPLogin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"verifyOTPLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Admin\",\r\n    \"password\":\"Admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/EmailLogin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"EmailLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResendEmailLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"magic_token\":\"F5nLFHXEfhe5gMBO9m6gB6avBvWa5512\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/ResendEmailLogin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"ResendEmailLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmailAuthenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"magic_token\":\"q7G003VZGq3ja9XCGi9buYcLU8XLrWwU\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/EmailAuthenticate",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"EmailAuthenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"magic_token\":\"q7G003VZGq3ja9XCGi9buYcLU8XLrWwU\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/CheckLogin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"CheckLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/getAdmin",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"getAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/users?page=1",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/users?page=1",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNDU3ODUyNiwiZXhwIjoxNzI0NjY0OTI2fQ.zql88IeEEmUEPSDxWx7NZYwu62J78B8V8OuYwvcdNZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/viewUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"viewUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "duplicateCards",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/duplicateCards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"duplicateCards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enableWheel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/enableWheel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"enableWheel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disableWheel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/disableWheel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"disableWheel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disableGifting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/disableGifting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"disableGifting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enableGifting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/enableGifting",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"enableGifting"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserPaymentStatus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/updateUserPaymentStatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateUserPaymentStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateLinkedGame",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTYxNTgyMiwiZXhwIjoxNzI1NzAyMjIyfQ.3UMH4D-E4AnAbZO8NJS4d5WrwCfMoDp5pDD1vFeUhqU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/updateLinkedGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateLinkedGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addGoldCoin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\",\r\n    \"amount\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/addGoldCoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addGoldCoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeGoldCoin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\",\r\n    \"amount\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/removeGoldCoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"removeGoldCoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addWallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\",\r\n    \"amount\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/addWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"addWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeWallet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\",\r\n    \"amount\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/removeWallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"removeWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/banUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"banUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unbanUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/unbanUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"unbanUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/saveNote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"saveNote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAvs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"26273\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/updateAvs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updateAvs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingVerifications",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pendingVerifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pendingVerifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsByGame",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTc5NDI1NiwiZXhwIjoxNzI1ODgwNjU2fQ.8H5xQUHggKsSvWY0ENrdISxSdNEFBVuJgL1HazqU6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"game_id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/creationsByGame?id=2&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"creationsByGame"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsByGameCompleted",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTc5NDI1NiwiZXhwIjoxNzI1ODgwNjU2fQ.8H5xQUHggKsSvWY0ENrdISxSdNEFBVuJgL1HazqU6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"game_id\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/creationsByGameCompleted?id=2&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"creationsByGameCompleted"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewCreation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTc5NDI1NiwiZXhwIjoxNzI1ODgwNjU2fQ.8H5xQUHggKsSvWY0ENrdISxSdNEFBVuJgL1HazqU6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/viewCreation?id=97272",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"viewCreation"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "97272"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTcwNTAxOSwiZXhwIjoxNzI1NzkxNDE5fQ.ifHvMCZEzBshgsd6dUFkCo_TioXdWx2-1n5QhFkjPRk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/creations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"creations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsByUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTc5NDI1NiwiZXhwIjoxNzI1ODgwNjU2fQ.8H5xQUHggKsSvWY0ENrdISxSdNEFBVuJgL1HazqU6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/creationsByUser?id=26273",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"creationsByUser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "26273"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsByUserCompleted",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyNTc5NDI1NiwiZXhwIjoxNzI1ODgwNjU2fQ.8H5xQUHggKsSvWY0ENrdISxSdNEFBVuJgL1HazqU6Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/creationsByUserCompleted?id=26273",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"creationsByUserCompleted"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "26273"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingTxns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/pendingTxns",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"pendingTxns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completedTxns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/completedTxns",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"completedTxns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approveTxn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"txn_id\":\"521146\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/approveTxn",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"approveTxn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rejectTxn",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjA2MzEyMiwiZXhwIjoxNzIyMTQ5NTIyfQ._BMgU7g3IwDfRgD5JxT-eQq96lbpef-fLM0zmCYeVKQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"txn_id\":\"521148\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/rejectTxn",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"rejectTxn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/dashboard",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depositChart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/depositChart?from_date=2023-08-01&to_date=2023-08-30",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"depositChart"
+					],
+					"query": [
+						{
+							"key": "from_date",
+							"value": "2023-08-01"
+						},
+						{
+							"key": "to_date",
+							"value": "2023-08-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdrawChart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/depositChart?from_date=2023-08-01&to_date=2023-08-30",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"depositChart"
+					],
+					"query": [
+						{
+							"key": "from_date",
+							"value": "2023-08-01"
+						},
+						{
+							"key": "to_date",
+							"value": "2023-08-30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sidebar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzE5NTk2NiwiZXhwIjoxNzIzMjgyMzY2fQ.erwIlU-8KF6eZpeuXqJjKmhRRmWGSkfwfR-NxKsLcZY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/sidebar",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"sidebar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsToday",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzExMjEyOSwiZXhwIjoxNzIzMTk4NTI5fQ.d7CzhUjmR5SAev00rQAWJAb_pLfDdJHxoCrdzh2babE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/creationsToday",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"creationsToday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsWeek",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/creationsWeek",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"creationsWeek"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cashiers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/cashiers",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"cashiers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "permissions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/permissions",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePermission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_id\":\"1\",\r\n    \"p_status\":\"0\",\r\n    \"p_name\":\"deposit\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/updatePermission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"updatePermission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCashier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Sourav\",\r\n    \"lastName\":\"Karmakar\",\r\n    \"username\":\"Sourav\",\r\n    \"email\":\"test@email.com\",\r\n    \"phone\":\"918670569067\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/createCashier",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"createCashier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCashier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_id\":\"7\",\r\n    \"firstName\":\"Sourav\",\r\n    \"lastName\":\"Karmakar\",\r\n    \"username\":\"Sourav\",\r\n    \"email\":\"test2@email.com\",\r\n    \"phone\":\"918670569067\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/updateCashier",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"updateCashier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "banCashier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/banCashier",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"banCashier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unbanCashier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/unbanCashier",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"unbanCashier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCashier",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjUxNTY5MSwiZXhwIjoxNzIyNjAyMDkxfQ.FHQ9OdLoQyf7dtkp0i4ucCNQnxorbYsOqcHjVySbcxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"admin_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/deleteCashier",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"deleteCashier"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creationsByCashier",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/creationsByCashier?from=2024-08-01&to=2024-08-05&cashier=Aiden",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"creationsByCashier"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2024-08-01"
+						},
+						{
+							"key": "to",
+							"value": "2024-08-05"
+						},
+						{
+							"key": "cashier",
+							"value": "Aiden"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingRedeems",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/viewRedeem/27878",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"viewRedeem",
+						"27878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completedRedeems",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/completedRedeems",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"completedRedeems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewRedeem",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/viewRedeem/27878",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"viewRedeem",
+						"27878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approveRedeem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"redeem_id\":\"27878\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/approveRedeem",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"approveRedeem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rejectRedeem",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMjg1NDU0MywiZXhwIjoxNzIyOTQwOTQzfQ.dTxWxzDAioNd9DC__RZrJgdBvpKthIcVVij6T0_VvhA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"redeem_id\":\"27878\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/rejectRedeem",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"rejectRedeem"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingWiths",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/viewRedeem/27878",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"viewRedeem",
+						"27878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "completedWiths",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/viewRedeem/27878",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"viewRedeem",
+						"27878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewWith",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/viewRedeem/27878",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"viewRedeem",
+						"27878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pendingACHWithdraw",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pendingACHWithdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pendingACHWithdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchWiths",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pendingACHWithdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pendingACHWithdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchPendingTxns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzAxNzkwMCwiZXhwIjoxNzIzMTA0MzAwfQ.xvJL4sD5Bw4t6spkhlsxyJu5FIH0zSiaDutc9UEFS8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/pendingACHWithdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pendingACHWithdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "approveWith",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzQ1NzQ0MCwiZXhwIjoxNzIzNTQzODQwfQ.FreexJ65F1dTpUgiIU3iXg_A4vnDpQtE_YbQSrn8C2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"with_id\": \"11230\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/approveWith",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"approveWith"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rejectWith",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBZG1pbiIsImlhdCI6MTcyMzQ1NzQ0MCwiZXhwIjoxNzIzNTQzODQwfQ.FreexJ65F1dTpUgiIU3iXg_A4vnDpQtE_YbQSrn8C2Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"with_id\": \"11230\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/approveWith",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"approveWith"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"Admin Login\",\r\n    \"email\":\"aidenmctavish@gmail.com\",\r\n    \"name\":\"Sourav\",\r\n    \"mail\":\"Hey Sourav\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/email",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"917717739524\",\r\n    \"message\":\"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://bend.logiclane.tech/api/sms",
+					"protocol": "https",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gametimesend",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"gtwid\":\"7717739524\",\r\n    \"p_code\":\"52889\",\r\n    \"gtoid\":\"035668c8-bdca-4c2e-bc61-73f455304f00\",\r\n    \"gtdid\":\"1ab1092a-ece3-4f1a-ba3c-491b1b2f61fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/gametimesend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"gametimesend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gametime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"gtwid\":\"7717739524\",\r\n    \"p_code\":\"52889\",\r\n    \"gtoid\":\"035668c8-bdca-4c2e-bc61-73f455304f00\",\r\n    \"gtdid\":\"1ab1092a-ece3-4f1a-ba3c-491b1b2f61fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://bend.logiclane.tech/api/gametime",
+					"protocol": "http",
+					"host": [
+						"bend",
+						"logiclane",
+						"tech"
+					],
+					"path": [
+						"api",
+						"gametime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"gtwid\":\"7717739524\",\r\n    \"p_code\":\"52889\",\r\n    \"gtoid\":\"035668c8-bdca-4c2e-bc61-73f455304f00\",\r\n    \"gtdid\":\"1ab1092a-ece3-4f1a-ba3c-491b1b2f61fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/gametimesend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"gametimesend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"gtwid\":\"7717739524\",\r\n    \"p_code\":\"52889\",\r\n    \"gtoid\":\"035668c8-bdca-4c2e-bc61-73f455304f00\",\r\n    \"gtdid\":\"1ab1092a-ece3-4f1a-ba3c-491b1b2f61fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/gametimesend",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"gametimesend"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bonuses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"1\",\r\n    \"gtwid\":\"7717739524\",\r\n    \"p_code\":\"52889\",\r\n    \"gtoid\":\"035668c8-bdca-4c2e-bc61-73f455304f00\",\r\n    \"gtdid\":\"1ab1092a-ece3-4f1a-ba3c-491b1b2f61fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bonuses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bonuses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import Button from '@mui/material/Button';
@@ -16,20 +17,16 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import _ from '@lodash';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-
+import axios from 'axios';
 /**
  * Form Validation Schema
  */
 const schema = z.object({
-	email: z.string().email('You must enter a valid email').nonempty('You must enter an email'),
-	password: z
-		.string()
-		.min(8, 'Password is too short - must be at least 8 chars.')
-		.nonempty('Please enter your password.')
+
 });
 
 const defaultValues = {
-	email: '',
+	username: '',
 	password: '',
 	remember: true
 };
@@ -51,11 +48,36 @@ function ClassicSignInPage() {
 	const handleClickShowPassword = () => setShowPassword(!showPassword);
 	const handleMouseDownPassword = (event) => event.preventDefault();
 
+	const [username, setUsername] = useState('');
+	const [password, setPassword] = useState('');
+	const [magicToken, setMagicToken] = useState('');
+	if (typeof sessionStorage !== "undefined") {
+		const magic_token = sessionStorage.getItem('magic_token');
+	}
+	const navigate = useNavigate();
+
+	console.log(username, password);
 	function onSubmit() {
 		reset(defaultValues);
 	}
 
-	const navigate = useNavigate();
+	const handleLogin = async () => {
+		// console.log('pressed')
+		if (username && password) {
+			// const response = await axios.post('https://bend.logiclane.tech/api/EmailLogin', { username, password });
+			axios.post('https://bend.logiclane.tech/api/EmailLogin', { username, password })
+				.then(response => {
+					if (response.data.magic_token) {
+						setMagicToken(response.data.magic_token);
+						sessionStorage.setItem('magic_token', response.data.magic_token)
+						navigate('/pages/authentication/confirmation-required/classic')
+						// console.log(response.data.magic_token)
+					}
+				}).catch(error => {
+					console.error(error.message)
+				})
+		}
+	}
 
 	return (
 		<div className="flex min-w-0 flex-auto flex-col items-center sm:justify-center">
@@ -69,20 +91,22 @@ function ClassicSignInPage() {
 						name="loginForm"
 						noValidate
 						className="mt-32 flex w-full flex-col justify-center"
-						onSubmit={handleSubmit(onSubmit)}
+						onSubmit={handleSubmit(handleLogin)}
 					>
 						<Controller
-							name="email"
+							name="username"
 							control={control}
 							render={({ field }) => (
 								<TextField
 									{...field}
 									className="mb-24"
-									label="Username/Email"
+									label="Username"
 									autoFocus
-									type="email"
-									error={!!errors.email}
-									helperText={errors?.email?.message}
+									type="text"
+									// error={!!errors.email}
+									// helperText={errors?.email?.message}
+									value={username}
+									onChange={(e) => setUsername(e.target.value)}
 									variant="outlined"
 									required
 									fullWidth
@@ -101,6 +125,8 @@ function ClassicSignInPage() {
 										label="Password"
 										error={!!errors.password}
 										helperText={errors?.password?.message}
+										value={password}
+										onChange={(e) => setPassword(e.target.value)}
 										InputProps={{
 											endAdornment: (
 												<InputAdornment position="end">
@@ -142,16 +168,16 @@ function ClassicSignInPage() {
 							/>
 						</div>
 						{/* <Link to="/pages/authentication/confirmation-required/classic"> */}
-							<Button onClick={()=>navigate("/pages/authentication/confirmation-required/classic")}
-								variant="contained"
-								className={`mt-16 w-full ${isValid ? 'bg-[#00a7ff] hover:bg-[#008bd6] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
-								aria-label="Sign in"
-								disabled={_.isEmpty(dirtyFields) || !isValid}
-								type="submit"
-								size="large"
-							>
-								Sign in
-							</Button>
+						<Button
+							variant="contained"
+							className={`mt-16 w-full ${isValid ? 'bg-[#00a7ff] hover:bg-[#008bd6] text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'}`}
+							aria-label="Sign in"
+							// disabled={_.isEmpty(dirtyFields) || !isValid}
+							type="submit"
+							size="large"
+						>
+							Sign in
+						</Button>
 						{/* </Link> */}
 					</form>
 				</div>
